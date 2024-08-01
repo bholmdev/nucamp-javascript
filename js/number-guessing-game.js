@@ -8,6 +8,9 @@ function runGame() {
 
     do {
         guessString = prompt("I am thinking of a number in the range of 1 to 100.\n\nWhat is the number?");
+        if (guessString === null) {
+            return
+        }
         guessNumber = +guessString;
         numTries += 1;
         correct = checkGuess(guessNumber, target);
